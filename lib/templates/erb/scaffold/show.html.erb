@@ -1,0 +1,15 @@
+<h1><%%= t_showing_model :<%= singular_table_name %> %></h1>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <% attributes.reject(&:password_digest?).each do |attribute| -%>
+    <p>
+      <strong><%%= t_attr_model :<%= singular_table_name %>, :<%= attribute.name %> %>:</strong>
+      <%%= @<%= singular_table_name %>.<%= attribute.name %> %>
+    </p>
+    <% end -%>
+  </div>
+</div>
+
+<%%= link_to t('app.edit'), edit_<%= singular_table_name %>_path(@<%= singular_table_name %>) %> |
+<%%= link_to t('app.back'), <%= index_helper %>_path %>

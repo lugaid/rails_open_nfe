@@ -1,0 +1,9 @@
+<%= simple_form_for @role, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f| %>
+  
+  <%= f.error_notification %>
+  <%= f.input :name %>
+  <%= f.association :permissions, label_method: :permission_description %>
+
+  <%= f.button :submit %>
+
+<% end %>

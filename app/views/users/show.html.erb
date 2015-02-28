@@ -1,0 +1,15 @@
+<h1><%= t_showing_model :user %></h1>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p><strong><%= t_attr_model :user, :full_name %>:</strong>
+      <%= @user.full_name %>
+    </p>
+    <p><strong><%= t_attr_model :user, :email %>:</strong>
+      <%= @user.email %>
+    </p>
+  </div>
+</div>
+
+<%= link_to t('app.edit'), edit_user_path(@user) %> |
+<%= link_to t('app.back'), users_path %>

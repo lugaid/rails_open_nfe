@@ -1,0 +1,66 @@
+pt-BR:
+  unauthorized:
+    manage:
+      all: "Você não tem acesso para executar essa ação."
+  app:
+    title: Rails Open NFe
+    register:
+      one: Cadastro
+      other: Cadastros
+    actions: Ações
+    show: Mostrar
+    edit: Editar
+    destroy: Excluir
+    back: Voltar
+    destroy_question: Você tem certeza que deseja excluir?
+    showing_model: "Mostrando %{model}"
+    listing_model: "Listando %{model}"
+    creating_model: "Criando %{model}"
+    editing_model: "Editando %{model}"
+    create_model: "Criar %{model}"
+    created_model: "%{model} criado com sucesso."
+    updated_model: "%{model} alterado com sucesso."
+    destroyed_model: "%{model} excluido com sucesso."
+  simple_form:
+    labels:
+      role:
+        name: Nome
+        permissions: "Permissões"
+      user: &user_attr
+        full_name: "Nome Completo"
+        email: "Email"
+        password: "Senha"
+        password_confirmation: "Confirmar Senha"
+      sender:
+        name: 'Razão Social'
+        cnpj: 'CNPJ'
+        certificate: 'Certificado Digital'
+        nfe_sender: 'Emissor NFe'
+      invoice:
+        sender: "Emissor"
+        number: "Número"
+        series: "Série"
+        signed_xml: "XML Assinado"
+  activerecord:
+    models:
+      role:
+        one: "Grupo de Acessos"
+        other: "Grupo de Acessos"
+      permission:
+        one: "Permissão"
+        other: "Permissões" 
+      user:
+        one: "Usuário"
+        other: "Usuários"
+      sender:
+        one: "Emissor"
+        other: "Emissores"
+      invoice:
+        one: "Nota Fiscal Eletrônica"
+        other: "Notas Fiscais Eletrônicas"
+    attributes:
+      user: *user_attr
+  devise:
+    sessions:
+      user:
+        signed_in: 'Bem vindo!'

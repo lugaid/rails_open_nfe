@@ -1,0 +1,12 @@
+<h1><%= t_showing_model :role %></h1>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p><strong><%= t_attr_model :role, :name %>:</strong>
+      <%= @role.name %>
+    </p>
+  </div>
+</div>
+
+<%= link_to t('app.edit'), edit_role_path(@role) %> |
+<%= link_to t('app.back'), roles_path %>

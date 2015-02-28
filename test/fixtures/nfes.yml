@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sender_id: 
+  number: 1
+  series: 
+  signed_xml: MyText
+
+two:
+  sender_id: 
+  number: 1
+  series: 
+  signed_xml: MyText

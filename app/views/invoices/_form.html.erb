@@ -1,0 +1,10 @@
+<%= simple_form_for @invoice, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f| %>
+  <%= f.error_notification %>
+  
+  <%= f.association :sender %>
+  <%= f.input :number %>
+  <%= f.input :series %>
+  <%= f.input :signed_xml %>
+
+  <%= f.button :submit %>
+<% end %>

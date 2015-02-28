@@ -1,0 +1,6 @@
+administrator:
+  id: 1
+  full_name: Administrator
+  email: admin@admin.com
+  encrypted_password: 123456
+  roles: super_admin

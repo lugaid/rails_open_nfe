@@ -1,0 +1,25 @@
+<h1><%= t_showing_model :sender %></h1>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+        <p>
+      <strong><%= t_attr_model :sender, :name %>:</strong>
+      <%= @sender.name %>
+    </p>
+        <p>
+      <strong><%= t_attr_model :sender, :cnpj %>:</strong>
+      <%= @sender.cnpj %>
+    </p>
+        <p>
+      <strong><%= t_attr_model :sender, :certificate %>:</strong>
+      <%= @sender.certificate %>
+    </p>
+        <p>
+      <strong><%= t_attr_model :sender, :nfe_sender %>:</strong>
+      <%= @sender.nfe_sender %>
+    </p>
+      </div>
+</div>
+
+<%= link_to t('app.edit'), edit_sender_path(@sender) %> |
+<%= link_to t('app.back'), senders_path %>

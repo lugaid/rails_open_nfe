@@ -1,0 +1,10 @@
+<h1><%%= t_editing_model :<%= singular_table_name.titleize %> %></h1>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%%= render 'form' %>
+  </div>
+</div>
+
+<%%= link_to t('app.show'), @<%= singular_table_name %> %> |
+<%%= link_to t('app.back'), <%= index_helper %>_path %>

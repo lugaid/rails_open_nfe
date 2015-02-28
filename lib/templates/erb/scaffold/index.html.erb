@@ -1,0 +1,29 @@
+<h1><%%= t_listing_model :<%= singular_table_name %> %></h1>
+
+<div class="panel panel-default">
+  <table class="table">
+    <thead>
+      <tr>
+<% attributes.reject(&:password_digest?).each do |attribute| -%>
+        <th><%%= t_attr_model :<%= singular_table_name %>, :<%= attribute.name %> %></th>
+<% end -%>
+        <th colspan="3" class="col-md-1"><%%= t('app.actions') %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+        <tr>
+<% attributes.reject(&:password_digest?).each do |attribute| -%>
+          <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
+<% end -%>
+          <td><%%= link_to t('app.show'), <%= singular_table_name %> %></td>
+          <td><%%= link_to t('app.edit'), edit_<%= singular_table_name %>_path(<%= singular_table_name %>) %></td>
+          <td><%%= link_to t('app.destroy'), <%= singular_table_name %>, method: :delete, data: { confirm: t('app.destroy_question') } %></td>
+        </tr>
+      <%% end %>
+    </tbody>
+  </table>
+</div>
+
+<%%= link_to t_create_model(:<%= singular_table_name %>), new_<%= singular_table_name %>_path %>
